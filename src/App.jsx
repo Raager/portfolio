@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import FAQ from "./components/FAQ/FAQ";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { faqs } from "./data/index.js";
 
 const SEO_TITLE = "Бурлак Владімір — Full-Stack веб-розробник | React, Node.js";
 const SEO_DESC =
