@@ -1,0 +1,183 @@
+.about {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* --- LEFT / AVATAR --- */
+.left {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarWrap {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy-light) 0%, #1a3344 100%);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.avatar span {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.avatarRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(34, 197, 94, 0.25);
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatarBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--navy-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(12px);
+  z-index: 3;
+}
+
+/* --- RIGHT --- */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bio p {
+  font-size: 16px;
+  color: var(--slate);
+  line-height: 1.75;
+}
+
+.stackBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stackLabel {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--slate-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stackGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stackItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  transition:
+    border-color 0.25s,
+    transform 0.2s;
+  cursor: default;
+}
+
+.stackItem:hover {
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+.stackIcon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.stackName {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .left {
+    order: -1;
+  }
+  .avatarWrap {
+    width: 200px;
+    height: 200px;
+  }
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+  .avatar span {
+    font-size: 38px;
+  }
+}
