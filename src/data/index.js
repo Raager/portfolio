@@ -51,6 +51,17 @@ export const projects = [
     githubUrl: "#",
     featured: false,
   },
+    {
+    id: 5,
+    title: "Pro Builder",
+    description: "Лендінг сайт для буд. агенства Pro Builder. Чистий CSS, HTML, JavaScript",
+    image: builderImg,
+    color: "#2a1a2a",
+    tags: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://pro-builder-seven.vercel.app/",
+    githubUrl: "#",
+    featured: false,
+  },
 ];
 
 export const services = [
