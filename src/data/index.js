@@ -2,6 +2,7 @@ import zoriImg from "../images/zoriImg.png";
 import barberImg from "../images/BarberImg.png";
 import englishImg from "../images/EnglishImg.png";
 import plitkaImg from "../images/PlitkaImg.png";
+import builderImg from "../images/builderImg.png";
 
 export const projects = [
   {
